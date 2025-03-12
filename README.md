@@ -70,6 +70,6 @@
 
 ## Команда проекта
 - [Каппес Григорий](https://t.me/gr1kap) — Тимлид
-- [Подолская Анастасия](https://web.telegram.org/a/#868974590)— Backend-разработчик
-- [Исмайлов Никита](https://web.telegram.org/a/#5185844259)— Frontend-разработчик
-- [Тимофеев Роман](https://web.telegram.org/a/#1212541686)— Тестировщик                            
+- [Подолская Анастасия](https://t.me/vinolix)— Backend-разработчик
+- [Исмайлов Никита](https://t.me/Zimchanos)— Frontend-разработчик
+- [Тимофеев Роман](https://t.me/ytopian)— Тестировщик                            
