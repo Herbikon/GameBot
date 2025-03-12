@@ -1,0 +1,55 @@
+CREATE TABLE "Genre" (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ "Genre_name" TEXT
+);
+
+CREATE TABLE "Publisher" (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ "Publishers_name" TEXT
+);
+
+CREATE TABLE "Developer" (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ "Developers_name" TEXT
+);
+
+CREATE TABLE "Operating_system" (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ "Name_operating_system" TEXT
+);
+
+CREATE TABLE "Tags" (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ "Tag_name" TEXT
+);
+
+CREATE TABLE "Games" (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ "Name_game" TEXT,
+ "Description" TEXT,
+ "All_reviews" TEXT,
+ "Controller_support" TEXT,
+ "Age_limit" TEXT,
+ "id_Genre" INTEGER,
+ "id_Publisher" INTEGER,
+ "id_Developer" INTEGER,
+ "id_Operating_system" INTEGER,
+ FOREIGN KEY("id_Genre") REFERENCES "Genre"("id"),
+ FOREIGN KEY("id_Publisher") REFERENCES "Publisher"("id"),
+ FOREIGN KEY("id_Developer") REFERENCES "Developer"("id"),
+ FOREIGN KEY("id_Operating_system") REFERENCES "Operating_system"("id")
+ );
+
+ CREATE TABLE "Localization" (
+ "Voice" TEXT,
+ "Interface" TEXT,
+ "Subtitles" TEXT,
+ "id_Game" INTEGER,
+ FOREIGN KEY("id_Game") REFERENCES "Games" ("id")
+);
+ 
+CREATE TABLE "Tags_and_game" (
+ "id_Game" INTEGER,
+ "id_Tag" INTEGER,
+ FOREIGN KEY("id_Tag") REFERENCES "Tags" ("id")
+);
